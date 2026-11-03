@@ -1,3 +1,5 @@
+<sub>Copyright 2026 Mustafa Khodir. All rights reserved. Photos, videos and designs may not be reused without permission.</sub>
+
 # Embedded C: mbed Guessing Game and Keyword Counter
 
 Two C programs. The first is a guessing game that runs on an ARM mbed board and talks to a PC over a serial link, with the keypad, LCD and LED bar on the board all doing a job. The second is a command line tool that scans a large text file and counts how many times each word from a keyword list appears, using a linked list so everything is matched in one pass.
@@ -101,10 +103,11 @@ If the PC sends something that is not a clean number, including a number with ex
 
 ## Source code
 
-The full source code is kept in a private repository. To review it, [email me](mailto:mkhodir77@gmail.com?subject=Code%20access%3A%20embedded-c-mbed) with your name, company and GitHub username, and I will give you read access.
+The source code is private. Selected parts are available to employers for technical review. Contact me at [mkhodir77@gmail.com](mailto:mkhodir77@gmail.com).
 
 ## What's in this repo
 
+- `outline/` outline files for the main programs: function names, structure and comments only. The working logic is in the private repository.
 - `media/` photos of the board at each stage of the game and an overview of the screens.
 - `media/demo/` the demo recordings, GIFs to watch here and one MP4 with captions.
 
@@ -128,4 +131,4 @@ Video of the game on the real board: Google Drive link: (add link here)
 
 The full project report is available on request.
 
-Copyright 2026 Mustafa Khodir. All rights reserved.
+Copyright 2026 Mustafa Khodir. All rights reserved. Photos, videos and designs may not be reused without permission.
