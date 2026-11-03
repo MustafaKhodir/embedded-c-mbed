@@ -123,7 +123,7 @@ The source code is private. Selected parts are available to employers for techni
 
 Both with captions:
 
-https://github.com/user-attachments/assets/d93678b9-f9b9-4661-b3a5-68a21a654b3b
+https://github.com/user-attachments/assets/f53f9853-4c1e-4d16-9886-3d39e0fdaa03
 
 The same video is in the repo as [embedded-c-demo.mp4](media/demo/embedded-c-demo.mp4) (50 s).
 
