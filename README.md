@@ -1,5 +1,3 @@
-<sub>Copyright 2026 Mustafa Khodir. All rights reserved. Photos, videos and designs may not be reused without permission.</sub>
-
 # Embedded C: mbed Guessing Game and Keyword Counter
 
 Two C programs. The first is a guessing game that runs on an ARM mbed board and talks to a PC over a serial link, with the keypad, LCD and LED bar on the board all doing a job. The second is a command line tool that scans a large text file and counts how many times each word from a keyword list appears, using a linked list so everything is matched in one pass.
@@ -126,8 +124,6 @@ Both with captions:
 https://github.com/user-attachments/assets/f53f9853-4c1e-4d16-9886-3d39e0fdaa03
 
 The same video is in the repo as [embedded-c-demo.mp4](media/demo/embedded-c-demo.mp4) (50 s).
-
-Video of the game on the real board: Google Drive link: (add link here)
 
 The full project report is available on request.
 
