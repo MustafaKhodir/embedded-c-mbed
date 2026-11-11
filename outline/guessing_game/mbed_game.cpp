@@ -48,6 +48,7 @@ const char Keytable[4][4] = {
 // then returns the character. Blocks until something is pressed.
 char getKey() { /* removed */ }
 
+// Sets up the SPI link to the LED bar: 16 bit words at 1 MHz
 void initLEDs() { /* removed */ }
 
 // Pushes a 16 bit pattern out to the LED bar and latches it
@@ -59,6 +60,7 @@ void ledsOff() { /* removed */ }
 // Flashes the LEDs on and off a few times, used when the game ends
 void blinkLEDs(int times) { /* removed */ }
 
+// Shows the welcome screen, waits for a key, then asks for the secret number
 void gameIntro() { /* removed */ }
 
 // Reads the secret number from the keypad. Type one or two digits, then

@@ -27,10 +27,11 @@
 #endif
 #include "rs232.h"
 
-// the board ends every reply that wants another guess with this
+// The board ends every reply that wants another guess with this
 #define PROMPT "Enter your guess: "
 
-// Blocks until at least one byte arrives, then returns the text as a string
+// Blocks until at least one byte arrives, stores what came in as a string in
+// buf and returns the number of bytes. It may be part of a line or several lines.
 static int readLine(int port, unsigned char *buf, int size) { /* removed */ }
 
 // The board's text can arrive split over several reads, so a reply is
@@ -39,6 +40,7 @@ static int readLine(int port, unsigned char *buf, int size) { /* removed */ }
 // score or game over in it.
 static int replyComplete(const char *text) { /* removed */ }
 
+// Keeps reading until replyComplete says the reply is whole or the buffer is full
 static void readReply(int port, char *reply, int size) { /* removed */ }
 
 int main(int argc, char *argv[]) { /* removed */ }

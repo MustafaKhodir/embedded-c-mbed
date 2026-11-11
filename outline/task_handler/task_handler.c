@@ -20,19 +20,19 @@
 #include <ctype.h>
 #include <time.h>
 
-// One keyword node
+// One node in the keyword list
 struct KeyWord {
     char *givenWord;            // the keyword itself
-    int index;                  // how many chars of it we have matched so far
-    int count;                  // how many whole word hits found
+    int index;                  // how many characters of it we have matched so far
+    int count;                  // how many whole word matches so far
     struct KeyWord *nextkeyword;
     struct KeyWord *prevkeyword;
 };
 
-// head of the list of keywords
+// Head of the list of keywords
 struct KeyWord *keywordsLinkedList = NULL;
 
-// the character before the current one, needed for the word boundary check
+// The character before the current one, needed for the word boundary check
 int lastChar = ' ';
 
 // Strips the newline (and a Windows \r if there is one) off a line read with fgets
@@ -55,7 +55,7 @@ int getKeywords(const char *filename) { /* removed */ }
 // it, so "prison" does not match inside "imprisoned".
 void moveIndexOnWord(int c, struct KeyWord *keyword) { /* removed */ }
 
-// Reads the big file char by char and runs every keyword's matcher on it
+// Reads the big file one character at a time and runs every keyword's matcher on it
 int searchKeywords(const char *filename) { /* removed */ }
 
 // Sorts the list by count, biggest first. I pull the node with the biggest
