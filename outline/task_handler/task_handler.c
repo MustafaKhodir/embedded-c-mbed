@@ -20,6 +20,12 @@
 #include <ctype.h>
 #include <time.h>
 
+#define DEFAULT_KEYWORD_FILE  "data/keywords.txt"
+#define DEFAULT_SEARCH_FILE   "data/main.txt"
+#define RESULTS_FILE          "Results.txt"
+#define KEYWORD_LINE_SIZE     100   // buffer for one line of the keyword file
+#define FILENAME_SIZE         260   // buffer for a file name typed by the user
+
 // One node in the keyword list
 struct KeyWord {
     char *givenWord;            // the keyword itself
@@ -38,6 +44,9 @@ int lastChar = ' ';
 // Strips the newline (and a Windows \r if there is one) off a line read with fgets
 static void stripNewline(char *line) { /* removed */ }
 
+// malloc that stops the program if there is no memory left
+static void *allocateOrExit(size_t size) { /* removed */ }
+
 // Adds a new keyword at the head of the list
 void addKeyword(const char *word) { /* removed */ }
 
@@ -55,6 +64,9 @@ int getKeywords(const char *filename) { /* removed */ }
 // it, so "prison" does not match inside "imprisoned".
 void moveIndexOnWord(int c, struct KeyWord *keyword) { /* removed */ }
 
+// Runs every keyword's matcher on one character
+static void feedAllKeywords(int c) { /* removed */ }
+
 // Reads the big file one character at a time and runs every keyword's matcher on it
 int searchKeywords(const char *filename) { /* removed */ }
 
@@ -68,5 +80,9 @@ void showResult(void) { /* removed */ }
 
 // Frees the list when we are done
 void freeKeywords(void) { /* removed */ }
+
+// Asks the user for a file name. Pressing Enter keeps the default already in
+// fileName. fileName must hold FILENAME_SIZE characters.
+static void askForFileName(const char *description, char *fileName) { /* removed */ }
 
 int main(void) { /* removed */ }

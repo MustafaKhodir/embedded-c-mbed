@@ -27,6 +27,24 @@
 const int MIN_NUMBER = 1;
 const int MAX_NUMBER = 30;
 const int MAX_GUESSES = 7;
+const int MAX_DIGITS = 2;                    // the secret number is at most two digits
+
+// Keypad and LED bar settings
+const int KEYPAD_SIZE = 4;                   // 4 rows and 4 columns
+const int LED_ON_PATTERN = 0x56AA;           // which LEDs light up while the game is on
+const int SPI_WORD_BITS = 16;
+const int SPI_MODE = 0;
+const int SPI_FREQUENCY = 1000000;           // 1 MHz
+const int END_BLINKS = 3;                    // LED flashes when the game ends
+
+// Pauses, in seconds
+const float KEY_DELAY = 0.2f;                // short pause after the keypad is used
+const float BLINK_DELAY = 0.3f;
+const float MESSAGE_DELAY = 1.0f;            // how long the "not in range" messages stay up
+const float SHOW_SECRET_DELAY = 1.5f;        // secret number stays on screen before the game starts
+const float END_SCREEN_DELAY = 2.0f;         // result stays on screen before BYE
+
+const int GUESS_LINE_SIZE = 16;              // longest line accepted from the PC, plus the end of string
 
 Serial pc(USBTX, USBRX);                     // serial link to the PC
 BusOut cols_out(p26, p25, p24);              // keypad column select, 0 to 3 in binary
@@ -37,7 +55,7 @@ SPI leds(p5, p6, p7);                        // LED bar shift register
 DigitalOut cs(p8);
 
 // What each keypad position means. Row by row, left to right.
-const char Keytable[4][4] = {
+const char Keytable[KEYPAD_SIZE][KEYPAD_SIZE] = {
     {'1', '2', '3', 'F'},
     {'4', '5', '6', 'E'},
     {'7', '8', '9', 'D'},
@@ -59,6 +77,9 @@ void ledsOff() { /* removed */ }
 
 // Flashes the LEDs on and off a few times, used when the game ends
 void blinkLEDs(int times) { /* removed */ }
+
+// Clears the LCD and writes one line of text on each row
+void showScreen(const char *topLine, const char *bottomLine) { /* removed */ }
 
 // Shows the welcome screen, waits for a key, then asks for the secret number
 void gameIntro() { /* removed */ }

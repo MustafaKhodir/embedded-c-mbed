@@ -30,6 +30,18 @@
 // The board ends every reply that wants another guess with this
 #define PROMPT "Enter your guess: "
 
+// Other text from the board that the PC reacts to
+#define GAME_BEGINS_TEXT  "Game_Begins"
+#define SCORE_TEXT        "Your score is"
+#define GAME_OVER_TEXT    "Game over"
+
+#define DEFAULT_PORT      17      // COM18 on Windows, change with the argument
+#define BAUD_RATE         9600    // must match the mbed
+#define POLL_DELAY_MS     50      // how long to wait before checking the port again
+#define CHUNK_SIZE        256
+#define REPLY_SIZE        512
+#define GUESS_SIZE        32
+
 // Blocks until at least one byte arrives, stores what came in as a string in
 // buf and returns the number of bytes. It may be part of a line or several lines.
 static int readLine(int port, unsigned char *buf, int size) { /* removed */ }
