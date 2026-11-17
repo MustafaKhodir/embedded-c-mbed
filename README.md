@@ -1,6 +1,6 @@
-# Embedded C: mbed Guessing Game and Keyword Counter
+# Embedded C and C++: mbed Guessing Game and Keyword Counter
 
-Two C programs. The first is a guessing game that runs on an ARM mbed board and talks to a PC over a serial link, with the keypad, LCD and LED bar on the board all doing a job. The second is a command line tool that scans a large text file and counts how many times each word from a keyword list appears, using a linked list so everything is matched in one pass.
+Two programs. The first is a guessing game in C++ that runs on an ARM mbed board and talks to a C program on the PC over a serial link, with the keypad, LCD and LED bar on the board all doing a job. The second is a command line tool in C that scans a large text file and counts how many times each word from a keyword list appears, using a linked list so everything is matched in one pass.
 
 ![The mbed board during a game. The LCD shows the game has begun with seven guesses left, and the LED bar is lit to show the game is live](media/board-game-begins.jpg)
 
